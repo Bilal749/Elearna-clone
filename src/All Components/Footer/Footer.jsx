@@ -3,7 +3,7 @@
 import { all_images } from "../../assets/All_images";
 import { FooterData } from "./FooterData.js";
 
-const footerData = () => {
+const Footer = () => {
   return (
     <footer className="bg-[#0F252A] text-gray-400 py-16 flex mt-40 justify-center flex-col items-center px-6 md:px-12 font-sans relative">
       <div className="footercard  absolute -top-32 w-[96%] h-[30vh] opacity-1 rounded-xl bg-[#FFB606]">
