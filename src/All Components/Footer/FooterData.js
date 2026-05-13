@@ -1,4 +1,4 @@
-export const footerData = {
+export const FooterData = {
   logo: {
     src: "logo.png", // Replace with your logo path
     description:

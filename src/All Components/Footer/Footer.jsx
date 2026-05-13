@@ -1,7 +1,7 @@
 /** @format */
 
-import { all_images } from '../../assets/All_images';
-import { footerData } from "./FooterData.js";
+import { all_images } from "../../assets/All_images";
+import { FooterData } from "./FooterData.js";
 
 const footerData = () => {
   return (
@@ -18,7 +18,7 @@ const footerData = () => {
               Browse Courses
             </button>
             <button className=" border border-[#0F252A] px-8 py-3 text-white">
-              Becme A Teacher{' '}
+              Becme A Teacher{" "}
             </button>
           </div>
         </div>
@@ -29,15 +29,15 @@ const footerData = () => {
           {/* Logo and Description Section */}
           <div className="lg:col-span-1">
             <h2 className="text-white text-3xl font-bold mb-6 flex items-center">
-              <img src={all_images.logo} alt="" />
+              <img src={all_images.Logo} alt="" />
             </h2>
             <p className="text-sm leading-relaxed max-w-xs">
-              {footerData.logo.description}
+              {FooterData.logo.description}
             </p>
           </div>
 
           {/* Dynamic Link Sections */}
-          {footerData.sections.map((section, index) => (
+          {FooterData.sections.map((section, index) => (
             <div key={index}>
               <h3 className="text-white font-semibold mb-6 text-lg">
                 {section.title}
@@ -46,7 +46,7 @@ const footerData = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
-                      href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
                       className="hover:text-yellow-500 transition-colors duration-200"
                     >
                       {link}
@@ -61,15 +61,15 @@ const footerData = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 mt-12 flex flex-col md:flex-row justify-between text-xs tracking-widest uppercase">
           <p>
-            DESIGN BY{' '}
+            DESIGN BY{" "}
             <span className="text-white font-medium">
-              {footerData.bottom.designBy}
+              {FooterData.bottom.designBy}
             </span>
           </p>
           <p>
-            POWERED BY{' '}
+            POWERED BY{" "}
             <span className="text-white font-medium">
-              {footerData.bottom.poweredBy}
+              {FooterData.bottom.poweredBy}
             </span>
           </p>
         </div>
@@ -78,4 +78,4 @@ const footerData = () => {
   );
 };
 
-export default footerData;
+export default Footer;
