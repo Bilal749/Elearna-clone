@@ -1,8 +1,9 @@
 /** @format */
 
-import React from 'react';
-import { Link } from 'react-router';
-import { useState } from 'react';
+import React from "react";
+import { Link } from "react-router";
+import { useState } from "react";
+import { all_images } from "../../assets/All_images";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,14 +17,14 @@ function Navbar() {
 
   const toggleDropdown = (name) => {
     if (dropdown === name) {
-      setDropdown('');
+      setDropdown("");
     } else {
       setDropdown(name);
     }
   };
   const nestedDropdown = (name) => {
     if (nestdropdown === name) {
-      setnestDropDown('');
+      setnestDropDown("");
     } else {
       setnestDropDown(name);
     }
@@ -33,11 +34,7 @@ function Navbar() {
     <div className="header px-4 bg-[#0F252A] w-full h-[68px]  flex items-center justify-between z-50 sticky top-0 ">
       <div className="divider  flex items-center justify-between w-full ">
         <div className="logo flex items-center justify-center">
-          <img
-            src="src\assets\All images\logo.svg"
-            alt=""
-            className="w-[105px]"
-          />
+          <img src={all_images.Logo} alt="" className="w-[105px]" />
         </div>
 
         <div className=" hidden lg:block menus text-white">
@@ -320,13 +317,13 @@ function Navbar() {
 
         <div
           className={`absolute top-full  left-0 max-w-full w-full px-2 mt-0 bg-white h-[100vh ] shadow-lg overflow-hidden transition-all duration-700 lg:hidden ${
-            open ? 'h-[786px] opcity-100 visible' : 'h-0 opacity-0 invisible'
+            open ? "h-[786px] opcity-100 visible" : "h-0 opacity-0 invisible"
           }`}
         >
           <ul className="w-full h-full">
             <li className="relative w-full justify-between py-4">
               <button
-                onClick={() => toggleDropdown('Home')}
+                onClick={() => toggleDropdown("Home")}
                 className="w-full flex items-center font-semibold px-2 justify-between"
               >
                 Home
@@ -337,7 +334,7 @@ function Navbar() {
                 />
               </button>
 
-              {dropdown === 'Home' && (
+              {dropdown === "Home" && (
                 <div className=" mt-2 bg-white px-3 pl-6 border-b-4 border-b-[#feb506] flex-col gap-5  text-black py-3 shadow-xl rounded-sm">
                   <Link
                     to="/home1"
@@ -366,7 +363,7 @@ function Navbar() {
             </li>
             <li className="relative w-full justify-between py-4">
               <button
-                onClick={() => toggleDropdown('Courses')}
+                onClick={() => toggleDropdown("Courses")}
                 className="w-full flex items-center font-semibold px-2 justify-between"
               >
                 Courses
@@ -377,12 +374,12 @@ function Navbar() {
                 />
               </button>
 
-              {dropdown === 'Courses' && (
+              {dropdown === "Courses" && (
                 <div className=" mt-2 bg-white px-3 pl-6 border-b-4 border-b-[#feb506] flex-col gap-5  text-black py-3 shadow-xl rounded-sm">
                   <ul className="relative">
                     <li className="relative">
                       <button
-                        onClick={() => nestedDropdown('free')}
+                        onClick={() => nestedDropdown("free")}
                         className="w-full flex items-center  px-2 justify-between py-3"
                       >
                         Free
@@ -392,7 +389,7 @@ function Navbar() {
                         />
                       </button>
 
-                      {nestdropdown === 'free' && (
+                      {nestdropdown === "free" && (
                         <div className=" mt-0 bg-white px-3 pl-6  flex-col gap-5  text-black py-3  rounded-sm">
                           <Link
                             to="/home1"
@@ -429,7 +426,7 @@ function Navbar() {
                     </li>
                     <li className="relative">
                       <button
-                        onClick={() => nestedDropdown('paid')}
+                        onClick={() => nestedDropdown("paid")}
                         className="w-full flex items-center  px-2 justify-between py-3"
                       >
                         Paid
@@ -439,7 +436,7 @@ function Navbar() {
                         />
                       </button>
 
-                      {nestdropdown === 'paid' && (
+                      {nestdropdown === "paid" && (
                         <div className=" mt-0 bg-white px-3 pl-6  flex-col gap-5  text-black py-3  rounded-sm">
                           <Link
                             to="/home1"
@@ -481,7 +478,7 @@ function Navbar() {
 
             <li className="relative w-full justify-between py-4">
               <button
-                onClick={() => toggleDropdown('Pages')}
+                onClick={() => toggleDropdown("Pages")}
                 className="w-full flex items-center font-semibold px-2 justify-between"
               >
                 Pages
@@ -492,7 +489,7 @@ function Navbar() {
                 />
               </button>
 
-              {dropdown === 'Pages' && (
+              {dropdown === "Pages" && (
                 <div className=" mt-2 bg-white px-3 pl-6 border-b-4 border-b-[#feb506] flex-col gap-5  text-black py-3 shadow-xl rounded-sm">
                   <Link
                     to="/home1"
@@ -560,7 +557,7 @@ function Navbar() {
 
             <li className="relative w-full justify-between py-4">
               <button
-                onClick={() => toggleDropdown('Blog')}
+                onClick={() => toggleDropdown("Blog")}
                 className="w-full flex items-center font-semibold px-2 justify-between"
               >
                 Blog
@@ -571,7 +568,7 @@ function Navbar() {
                 />
               </button>
 
-              {dropdown === 'Blog' && (
+              {dropdown === "Blog" && (
                 <div className=" mt-2 bg-white px-3 pl-6 border-b-4 border-b-[#feb506] flex-col gap-5  text-black py-3 shadow-xl rounded-sm">
                   <Link
                     to="/home1"
@@ -601,7 +598,7 @@ function Navbar() {
 
             <li className="relative w-full justify-between py-4">
               <button
-                onClick={() => toggleDropdown('Contact')}
+                onClick={() => toggleDropdown("Contact")}
                 className="w-full flex items-center font-semibold px-2 justify-between"
               >
                 Contact
@@ -612,7 +609,7 @@ function Navbar() {
                 />
               </button>
 
-              {dropdown === 'Contact' && (
+              {dropdown === "Contact" && (
                 <div className=" mt-2 bg-white px-3 pl-6 border-b-4 border-b-[#feb506] flex-col gap-5  text-black py-3 shadow-xl rounded-sm">
                   <Link
                     to="/home1"
